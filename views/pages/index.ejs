@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="container">
+
+    <header>
+            <% include ../partials/header %>
+    </header>
+
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <main>
+            <div class="jumbotron">
+                <h1>This is great</h1>
+                <p>Welcome to templating using EJS</p>
+            </div>
+     </main>
+
+     <h2>Variable</h2>
+     <p><%= tagline %></p>
+
+     <h2>Loop</h2>
+     <ul>
+         <% drinks.forEach(function(drink) { %>
+             <li><%= drink.name %> - <%= drink.drunkness %></li>
+         <% }); %>
+     </ul>
+
+      <footer>
+             <% include ../partials/footer %>
+      </footer>
+
+  </body>
+</html>
